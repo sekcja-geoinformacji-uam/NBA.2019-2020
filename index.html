@@ -1016,7 +1016,7 @@ L.tileLayer( 'https://api.mapbox.com/styles/v1/adryanque/ckdcy52na0j701imgnwx4q8
 
 
 
-var zespoly = new L.GeoJSON.AJAX("https://api.jsonbin.io/b/5f248452dddf413f95b98f2a/36",{onEachFeature:function (feature,layer) {
+var zespoly = new L.GeoJSON.AJAX("https://dl.dropboxusercontent.com/s/70bz3ufyxdtyt8a/json.json?dl=0",{onEachFeature:function (feature,layer) {
 	if (feature.properties.Rok != null){
 layer.bindPopup('<table id = "tabela_zespoly">\
   <caption>'+feature.properties.Zespol+'</caption>\
@@ -1052,7 +1052,7 @@ layer.bindPopup('<table id = "tabela_zespoly">\
 });
 
 
-  if (feature.properties.Zespol =="Cleveland Cavaliers"){
+  if (feature.properties.Zespol =="Cleveland Cavaliers" || feature.properties.Zespol =="Dallas Mavericks"){
 layer.on('click',function(e){
 	 //var arena_1a = arena.getElementsByClassName("arena_photo")[0].style.display = "block";
 	 //var arena_1b = arena.getElementsByClassName("arena_photo")[1].style.display = "none";
@@ -1196,7 +1196,7 @@ layer.on('click',function(e){
 	 arena_div.scrollTo(0, 0);
 	 document.getElementById("arena").style.display='block';
 	 document.getElementById("text").innerHTML = feature.properties.Arena;
-	 document.getElementById("background").style.backgroundPosition ='0 50%';
+	 document.getElementById("background").style.backgroundPosition ='0 45%';
 	 document.getElementById("background").style.backgroundImage = 'url('+feature.properties.Background+')';
 	 document.getElementById("pojemnosc").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/> Pojemność: </span></br>'  + feature.properties.Pojemnosc;
 	 document.getElementById("maskotka").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/>Maskotka:</span></br>'  + feature.properties.Maskotka;
@@ -1390,7 +1390,7 @@ layer.on('click',function(e){
 	 arena_div.scrollTo(0, 0);
 	 document.getElementById("arena").style.display='block';
 	 document.getElementById("text").innerHTML = feature.properties.Arena;
-	 document.getElementById("background").style.backgroundPosition ='0 50%';
+	 document.getElementById("background").style.backgroundPosition ='0 45%';
 	 document.getElementById("background").style.backgroundImage = 'url('+feature.properties.Background+')';
 	 document.getElementById("pojemnosc").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/> Pojemność: </span></br>'  + feature.properties.Pojemnosc;
 	 document.getElementById("maskotka").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/>Maskotka:</span></br>'  + feature.properties.Maskotka;
@@ -1513,72 +1513,6 @@ layer.on('click',function(e){
 	 document.getElementById("twitter2").style.top = "265px";
 	 document.getElementById("twitter3").style.top = "882";}	 
 )}
-else  if (feature.properties.Zespol =="Dallas Mavericks"){
-   layer.on('click',function(e){
-	 //var arena_1a = arena.getElementsByClassName("arena_photo")[0].style.display = "block";
-	 //var arena_1b = arena.getElementsByClassName("arena_photo")[1].style.display = "none";
-	 arena_div.scrollTo(0, 0);
-	 document.getElementById("arena").style.display='block';
-	 document.getElementById("text").innerHTML = feature.properties.Arena;
-	 document.getElementById("background").style.backgroundPosition ='0 45%';
-	 document.getElementById("background").style.backgroundImage = 'url('+feature.properties.Background+')';
-	 document.getElementById("pojemnosc").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/>Pojemność:</span></br>'  + feature.properties.Pojemnosc;
-	 document.getElementById("maskotka").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/>Maskotka:</span></br>'  + feature.properties.Maskotka + ' & ' + feature.properties.Maskotka_2;
-	 document.getElementById("otwarcie").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"> Rok otwarcia: </span></br>' + feature.properties.Otwarcie;
-	 document.getElementById("photo").style.height = "300px";
-	 document.getElementsByClassName("photo_slider")[0].style.marginTop = "10px";
-	 var arena_1 = arena.getElementsByClassName("arena_photo")[0].src = feature.properties.Image;
-	 var arena_2 = arena.getElementsByClassName("arena_photo")[1].src = feature.properties.Arena2_link;
-	 var arena_wysokosc_1 = arena.getElementsByClassName("arena_photo")[0].style.height = "300px";
-	 var arena_wysokosc_2 = arena.getElementsByClassName("arena_photo")[1].style.height = "300px";
-	 var zawodnik_photo_image_1 = zawodnik_photo_1.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_1_link;
-	 var zawodnik_tekst_1 = zawodnik_1.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_1;
-	 var zawodnik_photo_image_2 = zawodnik_photo_2.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_2_link;
-	 var zawodnik_tekst_2 = zawodnik_2.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_2;
-	 var zawodnik_photo_image_3 = zawodnik_photo_3.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_3_link;
-	 var zawodnik_tekst_3 = zawodnik_3.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_3;
-	 var zawodnik_photo_image_4 = zawodnik_photo_4.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_4_link;
-	 var zawodnik_tekst_4 = zawodnik_4.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_4;
-	 var zawodnik_photo_image_5 = zawodnik_photo_5.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_5_link;
-	 var zawodnik_tekst_5 = zawodnik_5.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_5;
-	 var numer_1 = zawodnik_photo_1.getElementsByClassName("numer")[0].innerHTML = feature.properties.Numer_1;
-	 var numer_2 = zawodnik_photo_2.getElementsByClassName("numer")[0].innerHTML = feature.properties.Numer_2;
-	 var numer_3 = zawodnik_photo_3.getElementsByClassName("numer")[0].innerHTML = feature.properties.Numer_3;
-	 var numer_4 = zawodnik_photo_4.getElementsByClassName("numer")[0].innerHTML = feature.properties.Numer_4;
-	 var numer_5 = zawodnik_photo_5.getElementsByClassName("numer")[0].innerHTML = feature.properties.Numer_5;
-	 var flaga_1 = zawodnik_photo_1.getElementsByClassName("flaga")[0].style.backgroundImage = "url("+feature.properties.Kraj_1+")";
-	 var flaga_2 = zawodnik_photo_2.getElementsByClassName("flaga")[0].style.backgroundImage = "url("+feature.properties.Kraj_2+")";
-	 var flaga_3 = zawodnik_photo_3.getElementsByClassName("flaga")[0].style.backgroundImage = "url("+feature.properties.Kraj_3+")";
-	 var flaga_4 = zawodnik_photo_4.getElementsByClassName("flaga")[0].style.backgroundImage = "url("+feature.properties.Kraj_4+")";
-	 var flaga_5 = zawodnik_photo_5.getElementsByClassName("flaga")[0].style.backgroundImage = "url("+feature.properties.Kraj_5+")";
-	 var pozycja_1 = pierwsza_dwojka.getElementsByClassName("pozycja")[0].innerHTML = feature.properties.Pozycja_1;
-	 var pozycja_2 = pierwsza_dwojka.getElementsByClassName("pozycja")[1].innerHTML = feature.properties.Pozycja_2;
-	 var pozycja_3 = druga_dwojka.getElementsByClassName("pozycja")[0].innerHTML = feature.properties.Pozycja_3;
-	 var pozycja_4 = druga_dwojka.getElementsByClassName("pozycja")[1].innerHTML = feature.properties.Pozycja_4;
-	 var pozycja_5 = zawodnik_5.getElementsByClassName("pozycja")[0].innerHTML = feature.properties.Pozycja_5;
-	 var wiek_1 = zawodnik_photo_1.getElementsByClassName("wiek")[0].innerHTML = feature.properties.wiek_1;
-	 var wiek_2 = zawodnik_photo_2.getElementsByClassName("wiek")[0].innerHTML = feature.properties.wiek_2;
-	 var wiek_3 = zawodnik_photo_3.getElementsByClassName("wiek")[0].innerHTML = feature.properties.wiek_3;
-	 var wiek_4 = zawodnik_photo_4.getElementsByClassName("wiek")[0].innerHTML = feature.properties.wiek_4;
-	 var wiek_5 = zawodnik_photo_5.getElementsByClassName("wiek")[0].innerHTML = feature.properties.wiek_5;
-	 var wzrost_1 = zawodnik_photo_1.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_1;
-	 var wzrost_2 = zawodnik_photo_2.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_2;
-	 var wzrost_3 = zawodnik_photo_3.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_3;
-	 var wzrost_4 = zawodnik_photo_4.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_4;
-	 var wzrost_5 = zawodnik_photo_5.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_5;
-	 document.getElementById("twitter_arena_1").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.wikimedia_arena_1+'">'+feature.properties.wikimedia_autor+'<img id = "wikipedia_logo"  src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tango_style_Wikipedia_Icon.svg/100px-Tango_style_Wikipedia_Icon.svg.png"</a>';
-	 document.getElementById("twitter_arena_2").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_arena+'">'+feature.properties.Zespol+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
-	 document.getElementById("twitter_arena_3").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka2+'">'+feature.properties.Maskotka_2+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
-	 document.getElementById("twitter_arena_4").style.display = "block";
-	 document.getElementById("twitter_arena_4").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka+'">'+feature.properties.Maskotka+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
-	 document.getElementById("nba_link").innerHTML = '<a id = "nba_link_spodek" target="_blank" href = "'+feature.properties.nba_druzyna+'"><img src = "https://dl.dropboxusercontent.com/s/kqippwm4xaypogz/nba.png?dl=0" id = "nba_logo_spodek" width=18px height = 40px><h3 id = "nba_text"></h3></a>';
-	 document.getElementById("nba_text").innerHTML = feature.properties.Zespol;
-	 document.getElementById("photo_maskotka").style.display = 'block';
-	 document.getElementById("photo_maskotka").innerHTML =  '<img class = "zespol_photo" src=" ' +feature.properties.Maskotka_link+'" id = "maskotka_image" height = 300px;>';
-	 document.getElementById("twitter").style.top = "265px";
-	 document.getElementById("twitter2").style.top = "265px";
-	 document.getElementById("twitter3").style.top = "882";
-  })}
 else  {
    layer.on('click',function(e){
 	 //var arena_1a = arena.getElementsByClassName("arena_photo")[0].style.display = "block";
@@ -1891,7 +1825,7 @@ var arena = document.getElementById("photo");
 	 var zawodnik_5 = jeden_player.getElementsByClassName("player5")[0];
 	 var zawodnik_photo_5 = zawodnik_5.getElementsByClassName("player_photo")[0];
 
-var dywizja = new L.GeoJSON.AJAX("https://api.jsonbin.io/b/5f24ae851823333f8f195be6/7",{onEachFeature:function forEachFeature (feature,layer){
+var dywizja = new L.GeoJSON.AJAX("https://www.dl.dropboxusercontent.com/s/skr5rtgix0t81i4/json_dywizje.json?dl=0",{onEachFeature:function forEachFeature (feature,layer){
 	if (feature.properties.Mistrzostwa != null){
 layer.bindPopup
 ('<table id = "tabela">\
@@ -1998,6 +1932,9 @@ function showDivs(n) {
   dots[slideIndex-1].className += " white";
   
 }
+
+
+
 
 
 
