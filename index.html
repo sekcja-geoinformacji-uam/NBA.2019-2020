@@ -1132,15 +1132,12 @@ document.getElementById("arena").style.display='block';
 	 document.getElementById("pojemnosc").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/> Pojemność: </span></br>'  + feature.properties.Pojemnosc;
 	 document.getElementById("maskotka").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"/>Maskotka:</span></br>'  + feature.properties.Maskotka;
 	 document.getElementById("otwarcie").innerHTML = '<span style = "text-shadow:3px 3px 2px #999; -webkit-text-stroke: 0.6px #ccc;"> Rok otwarcia: </span></br>' + feature.properties.Otwarcie;
-	 if (arena.getElementsByClassName("arena_photo")[1].style.display = "block") {
-		 document.getElementById("photo").style.height = "300px";
-	 }
 	 document.getElementById("photo").style.height = "250px";
 	 document.getElementsByClassName("photo_slider")[0].style.marginTop = "10px";
 	 var arena_1 = arena.getElementsByClassName("arena_photo")[0].src = feature.properties.Image;
 	 var arena_2 = arena.getElementsByClassName("arena_photo")[1].src = feature.properties.Arena2_link;
-	 var arena_wysokosc_1 = arena.getElementsByClassName("arena_photo")[0].style.height = "300px";
-	 var arena_wysokosc_2 = arena.getElementsByClassName("arena_photo")[1].style.height = "300px";
+	 var arena_wysokosc_1 = arena.getElementsByClassName("arena_photo")[0].style.height = "250px";
+	 var arena_wysokosc_2 = arena.getElementsByClassName("arena_photo")[1].style.height = "250px";
 	 var zawodnik_photo_image_1 = zawodnik_photo_1.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_1_link;
 	 var zawodnik_tekst_1 = zawodnik_1.getElementsByClassName("zawodnik")[0].innerHTML = feature.properties.Zawodnik_1;
 	 var zawodnik_photo_image_2 = zawodnik_photo_2.getElementsByClassName("player_image")[0].src = feature.properties.Zawodnik_2_link;
