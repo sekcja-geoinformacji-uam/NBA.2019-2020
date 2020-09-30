@@ -1016,7 +1016,7 @@ L.tileLayer( 'https://api.mapbox.com/styles/v1/adryanque/ckdcy52na0j701imgnwx4q8
 
 
 
-var zespoly = new L.GeoJSON.AJAX("https://dl.dropboxusercontent.com/s/70bz3ufyxdtyt8a/json.json?dl=0",{onEachFeature:function (feature,layer) {
+var zespoly = new L.GeoJSON.AJAX("https://dl.dropboxusercontent.com/s/9vr68tj2857drze/json_zespoly.json?dl=0",{onEachFeature:function (feature,layer) {
 	if (feature.properties.Rok != null){
 layer.bindPopup('<table id = "tabela_zespoly">\
   <caption>'+feature.properties.Zespol+'</caption>\
@@ -1107,9 +1107,9 @@ layer.on('click',function(e){
 	 var wzrost_5 = zawodnik_photo_5.getElementsByClassName("wzrost")[0].innerHTML = feature.properties.Wzrost_5;
 	 document.getElementById("twitter_arena_1").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.wikimedia_arena_1+'">'+feature.properties.wikimedia_autor+'<img id = "wikipedia_logo"  src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tango_style_Wikipedia_Icon.svg/100px-Tango_style_Wikipedia_Icon.svg.png"</a>';
 	 document.getElementById("twitter_arena_2").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_arena+'">'+feature.properties.Zespol+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
-	 document.getElementById("twitter_arena_3").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka+'">'+feature.properties.Maskotka_2+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
+	 document.getElementById("twitter_arena_3").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka+'">'+feature.properties.Maskotka+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
 	 document.getElementById("twitter_arena_4").style.display = "block";
-	 document.getElementById("twitter_arena_4").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka2+'">'+feature.properties.Maskotka+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
+	 document.getElementById("twitter_arena_4").innerHTML = '<a id = "twitter_link" target="_blank" href="'+feature.properties.twitter_maskotka2+'">'+feature.properties.Maskotka_2+'<i id = "twitter_icon" class="fa fa-twitter"></i></a>';
 	 document.getElementById("nba_link").innerHTML = '<a id = "nba_link_spodek" target="_blank" href = "'+feature.properties.nba_druzyna+'"><img src = "https://dl.dropboxusercontent.com/s/kqippwm4xaypogz/nba.png?dl=0" id = "nba_logo_spodek" width=18px height = 40px><h3 id = "nba_text"></h3></a>';
 	 document.getElementById("nba_text").innerHTML = feature.properties.Zespol;
 	 document.getElementById("photo_maskotka").style.display = 'block';
